@@ -1,6 +1,6 @@
 # PSOAIGUI
 
-PSOAIGUI (PowerShell OpenAI GUI) is a simple PowerShell-based graphical user interface for interacting with OpenAI's language models. It supports both Azure OpenAI and OpenAI API endpoints, allowing users to have conversations with AI models in a user-friendly interface.
+PSOAIGUI (PowerShell OpenAI GUI) is a simple PowerShell-based graphical user interface for interacting with OpenAI's language models. It supports both Azure OpenAI and OpenAI API endpoints, allowing users to have conversations with AI models in a user-friendly interface, with added support for voice input and output.
 
 ## Features
 
@@ -9,12 +9,15 @@ PSOAIGUI (PowerShell OpenAI GUI) is a simple PowerShell-based graphical user int
 - Conversation history with automatic titling
 - Ability to save conversations as text files
 - Easy configuration for API keys and endpoints
+- Voice input for hands-free interaction
+- Text-to-speech output for spoken responses
 
 ## Prerequisites
 
 - Windows operating system
 - PowerShell 5.1 or later
 - Azure OpenAI account or OpenAI API account
+- Internet connection for API access and voice services
 
 ## Setup
 
@@ -42,13 +45,21 @@ PSOAIGUI (PowerShell OpenAI GUI) is a simple PowerShell-based graphical user int
    ```
 2. The GUI window will appear, allowing you to interact with the AI model.
 3. Type your message in the input box and click "Send" or press Enter to send your message.
-4. The AI's response will appear in the conversation history.
-5. To start a new conversation, click the "New Conversation" button.
-6. To save the current conversation, click the "Save Conversation" button.
+4. Alternatively, click the "Voice Input" button to use speech recognition for input.
+5. The AI's response will appear in the conversation history.
+6. If text-to-speech is enabled, the AI's response will also be spoken aloud.
+7. To start a new conversation, click the "New Conversation" button.
+8. To save the current conversation, click the "Save Conversation" button.
+9. Toggle the "Enable TTS" checkbox to turn text-to-speech on or off.
 
 ## Customization
 
 You can customize the system prompt by modifying the `$systemPrompt` variable in the script. This allows you to set the initial context or instructions for the AI model.
+
+## Voice Features
+
+- **Voice Input**: Click the "Voice Input" button to activate speech recognition. Speak your message, and it will be transcribed and sent to the AI.
+- **Text-to-Speech**: When enabled, the AI's responses will be spoken aloud using the system's text-to-speech engine.
 
 ## Troubleshooting
 
@@ -57,6 +68,8 @@ If you encounter any issues:
 2. Check that you've selected the correct API choice ("OpenAI" or "Azure").
 3. Verify that your Azure OpenAI endpoint URL is correct if using Azure.
 4. Make sure you have an active internet connection.
+5. For voice input issues, check your microphone settings and permissions.
+6. For text-to-speech issues, ensure your system's audio output is working correctly.
 
 ## Contributing
 
